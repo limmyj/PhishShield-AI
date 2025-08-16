@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MalCommandGuard - Website Scan Report</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      color: #333;
+    }
+
+    .container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 960px;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2, h3 {
+      text-align: center;
+      color: #333;
+    }
+
+    .verdict-box {
+      font-size: 1.2rem;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .verdict-phishing {
+      background: #ffe5e5;
+      color: #c40000;
+    }
+
+    .verdict-suspicious {
+      background: #fff9db;
+      color: #b28d00;
+    }
+
+    .verdict-legit {
+      background: #e6ffed;
+      color: #007a00;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #0077cc;
+      color: white;
+    }
+
+    .btn {
+      padding: 8px 14px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 0.95rem;
+    }
+
+    .btn:hover {
+      background-color: #005f9e;
+    }
+
+    hr.section-divider {
+      border: none;
+      border-top: 2px solid #ccc;
+      margin: 30px 0 20px 0;
+    }
+
+    @media print {
+      .btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🔍 Website Scan Report</h2>
+    <div id="report">
+      <p>Loading scan result...</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <button class="btn" id="printBtn" title="Save this report as PDF">📄 Print / Save as PDF</button>
+    </div>
+  </div>
+
+  <script src="url_report.js"></script>
+</body>
+</html>

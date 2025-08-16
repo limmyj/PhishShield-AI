@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "MalCommandGuard",
+  "version": "1.0",
+  "description": "Detect phishing URLs using AI",
+  "permissions": [
+    "notifications",
+    "storage",
+    "scripting",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://localhost:5000/*",
+    "https://mail.google.com/*",
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://mail.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["banner.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

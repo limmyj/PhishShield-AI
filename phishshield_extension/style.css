@@ -1,0 +1,151 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  color: #333;
+}
+
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 960px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+  text-align: center;
+  color: #333;
+}
+
+.decision {
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.Phishing { background: #ffe5e5; color: #c40000; }
+.Legitimate { background: #e6ffed; color: #007a00; }
+.Suspicious { background: #fff9db; color: #b28d00; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.grid-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.email-body {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  white-space: pre-wrap;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.explanation-tag {
+  background: #eee;
+  color: #333;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  border-left: 4px solid #0077cc;
+}
+
+.tag-container .explanation-tag[style*="red"] {
+  border-left: 4px solid red !important;
+}
+
+.behavior-warning {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #0077cc;
+  color: white;
+}
+
+.btn {
+  padding: 5px 10px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #005f9e;
+}
+
+.details-box {
+  margin-top: 20px;
+  display: none;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.details-box h4 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+img.screenshot {
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+.redirect-warning {
+  color: red;
+  font-weight: bold;
+}
+
+@media print {
+  .btn, #detailsBox {
+    display: none;
+  }
+}

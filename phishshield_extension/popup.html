@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MalCommandGuard AI</title>
+  <link rel="stylesheet" href="popup.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 340px;
+      padding: 15px;
+      background: #f7f7f7;
+      text-align: center;
+    }
+    .circle-verdict {
+      font-size: 36px;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+    }
+    .verdict-legit { background-color: #c7f5d4; }
+    .verdict-suspicious { background-color: #fff3cd; }
+    .verdict-phishing { background-color: #f8d7da; }
+
+    .oval-summary {
+      display: inline-block;
+      padding: 5px 15px;
+      background-color: #ffeeba;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      margin: 2px;
+      border-radius: 12px;
+      font-size: 13px;
+      background: #e2e3e5;
+    }
+    .badge-links { background-color: #cfe2ff; }
+    .badge-spam { background-color: #f8d7da; }
+
+    .dropdown {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      text-align: left;
+      padding: 8px 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      margin-top: 5px;
+      font-size: 13px;
+    }
+
+    .dropdown.open .dropdown-content {
+      display: block;
+    }
+
+    .tooltip-label {
+      position: relative;
+      cursor: help;
+      border-bottom: 1px dashed #999;
+      display: inline-block;
+    }
+
+    .tooltip-text {
+      visibility: hidden;
+      width: 240px;
+      background-color: #333;
+      color: #fff;
+      text-align: left;
+      border-radius: 6px;
+      padding: 8px;
+      position: absolute;
+      z-index: 1000;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -120px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 12px;
+    }
+
+    .tooltip-label:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .url-box {
+      margin-top: 6px;
+      padding: 8px;
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      font-size: 12px;
+      border-left: 5px solid gray;
+    }
+    .url-legit { border-left-color: green; }
+    .url-suspicious { border-left-color: orange; }
+    .url-phish { border-left-color: red; }
+  </style>
+</head>
+<body>
+  <h2 style="margin: 5px 0;">🛡️ MalCommandGuard</h2>
+  <div id="verdict" class="circle-verdict verdict-legit">✅</div>
+  <div class="oval-summary" id="summaryTag">🕵️ Scanning Email...</div>
+  <p id="shortSummary" style="font-size:14px;"></p>
+
+  <div>
+    <span class="badge badge-links" id="badgeLinks">Links found: 0</span>
+    <span class="badge badge-spam" id="badgeSpamKeywords">Spam keywords: 0</span>
+  </div>
+
+  <hr style="margin: 12px 0;">
+
+  <div id="anomalyMessage" style="font-size: 13px; color: red; display: none;"></div>
+
+  <div class="dropdown" id="urlDropdown">
+    <b>🔗 URL Analysis ▼</b>
+    <div class="dropdown-content" id="urlCards"></div>
+  </div>
+
+  <button id="viewDetailsBtn" style="margin-top:10px;">View Details</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
