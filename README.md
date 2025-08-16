@@ -111,7 +111,7 @@ phishshield-ai/
 ## 📸 Screenshots  
 | Gmail Highlighting | Popup Extension | Detailed Report |
 |--------------------|-----------------|----------------|
-| ![Gmail](link)    | ![Popup](link)  | ![Report](link) |
+| ![Gmail](assets/screenshot1.png)    | ![Popup](assets/screenshot2.png)  | ![Report](assets/screenshot3.png) |
 
 ---
 
