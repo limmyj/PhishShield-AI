@@ -26,7 +26,7 @@ This project was developed as part of my **Final Year Project (B.Sc. Cyber Secur
 ---
 
 ## 🏗️ System Architecture  
-![System Architecture](system architecture.png)  
+![System Architecture](assets/architecture.png)
 
 The system consists of:  
 - **Frontend**: Chrome Extension (HTML, CSS, JS)  
