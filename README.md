@@ -102,8 +102,8 @@ phishshield-ai/
 ---
 
 ## 🧪 Model Performance  
-- **URL Detection (Random Forest)**: ~95% Accuracy  
-- **Email Detection (MLP + TF-IDF)**: ~93% Accuracy  
+- **URL Detection (Random Forest)**: ~93% Accuracy  
+- **Email Detection (MLP + TF-IDF)**: ~99% Accuracy  
 - **Combined Detection**: High precision with reduced false positives  
 
 ---
